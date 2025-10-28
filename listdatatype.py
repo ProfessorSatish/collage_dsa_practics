@@ -23,5 +23,41 @@ a=['ram','shyam','durgesh','kailash']
 a.insert(1,"satish")
 print(a)
 print(a)
-a.insert(2,"shyam")
+a.insert(1,"shyam")
 print(a)
+
+#remove opration
+"remove the first occurance of specified iteam from the list"
+b=['ram','shyam','durgesh','kailash']
+# i want to remove durgesh name in the list
+b.remove("durgesh")
+print(b)
+# i want to remove shyam name in the list
+b.remove('shyam')
+print(b)
+# i want to remove ram name in the list
+b.remove("ram")
+print(b)
+
+#pop operaton
+''' remove and returns an ita at specified index default is the last iteam'''
+c=['ram','shyam','durgesh','kailash']
+c.pop()
+print(c)
+c.pop()
+print(c)
+c.pop()
+print(c)
+
+#extend
+''' add alll element of an iterabl to the end of the list'''
+d=["apple ","banana","cherry"]
+e=['ram','shyam','durgesh','kailash']
+f=(d.extend(e))
+print(d)
+d.clear()
+print(d)
+#index opration
+s=e.index("ram")
+print(s)
+
