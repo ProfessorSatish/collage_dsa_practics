@@ -61,3 +61,10 @@ print(d)
 s=e.index("ram")
 print(s)
 
+#count operation
+g=e.count("ram")
+print(g)#output 1
+
+#reverse
+s=(e.reverse())
+print(s)
