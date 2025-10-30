@@ -42,3 +42,10 @@ s="java is my favroatie subject"
 print(s.replace("java","python"))
 print(s.replace("java","php"))
 print(s)
+h="hello"
+
+#convert upper case
+print(s.upper())
+print(s.lower())
+print(s.strip( ))
+print(h.split(" "))
