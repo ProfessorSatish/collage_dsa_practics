@@ -48,4 +48,7 @@ h="hello"
 print(s.upper())
 print(s.lower())
 print(s.strip( ))
-print(h.split(" "))
+print(s.split(""))
+
+
+
