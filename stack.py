@@ -42,32 +42,71 @@
 # r.display()
 '''creating the build in funcation using the stack'''
 
+# class Stack:
+#     def __init__(self,size):
+#         self.stack=[]
+#         self.max_size=size 
+#     def push(self,x):
+#         if len(self.stack)>=self.max_size:
+#             print("Stack is overflow ")
+#         else:
+#             self.stack.append(x)
+#         print(f"Pushed : {x} stack is now {self.stack}")
+#     def remove(self):
+#         if len(self.stack)<=0:
+#             print("Stack is under flow ")
+#         else:
+#             self.data=self.stack.pop()
+#         print(f"pop: {self.data} now the stack is show {self.stack} ")
+#     def display(self):
+#         if len(self.stack)<=0:
+#             print("Stack is under flow")
+#         else:
+#             print(f"The Stack is {self.stack}")
+# s=Stack(5)
+# s.push(2)
+# s.push(4)
+# s.push(6)
+# s.push(3)
+# s.push(3)
+# s.display()
+# s.push(33)
+
+''' the logical implementioan of the element in the stack '''
 class Stack:
     def __init__(self,size):
-        self.stack=[]
-        self.max_size=size 
-    def push(self,x):
-        if len(self.stack)>=self.max_size:
-            print("Stack is overflow ")
-        else:
-            self.stack.append(x)
-        print(f"Pushed : {x} stack is now {self.stack}")
-    def remove(self):
-        if len(self.stack)<=0:
-            print("Stack is under flow ")
-        else:
-            self.data=self.stack.pop()
-        print(f"pop: {self.data} now the stack is show {self.stack} ")
-    def display(self):
-        if len(self.stack)<=0:
+        self.size=size
+        self.stack=[0]*size
+        self.top=-1
+
+    def push(self,data):
+        if self.top==self.size-1:
+            print("stack is over flow 🤣")
+        self.top+=1
+        self.stack[self.top]=data
+        print(f"pushed {data} after the push {self.stack}")
+    def pop(self):
+        if self.top==-1:
             print("Stack is under flow")
-        else:
-            print(f"The Stack is {self.stack}")
-s=Stack(5)
-s.push(2)
-s.push(4)
-s.push(6)
-s.push(3)
-s.push(3)
-s.display()
-s.push(33)
+            return
+            
+        self.value=self.stack[self.top]
+        self.stack[self.top]=0
+        self.top -=1
+        print(f"popped value is {self.value} and the stack is {self.stack}")
+    def display(self):
+        if self.top<=-1:
+            
+            print("stack is under flow ")
+            return
+        print(self.stack)
+
+v=Stack(5)
+v.push(22)       
+v.push(33)
+v.push(44)
+v.push(55)
+v.pop()
+v.push(33)
+v.display()
+        
